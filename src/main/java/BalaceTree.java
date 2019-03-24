@@ -28,7 +28,7 @@ public class BalaceTree {
         int leftDepth = treeDepth(root.left);
         int rightDepth = treeDepth(root.right);
 
-        return leftDepth > rightDepth ? leftDepth+1 : rightDepth+1;
+        return 1+(leftDepth > rightDepth ? leftDepth : rightDepth);
     }
 
     /**方法2*/
@@ -45,7 +45,7 @@ public class BalaceTree {
         int[] leftdepth = new int[1], rightdepth = new int[1];
         if(isBalaceTree2(root.left,leftdepth) && isBalaceTree2(root.right,rightdepth)){
              if(Math.abs(leftdepth[0]-rightdepth[0]) <= 1){
-                 depth[0] =  leftdepth[0] > rightdepth[0] ? leftdepth[0]+1 : rightdepth[0]+1;
+                 depth[0] = 1+( leftdepth[0] > rightdepth[0] ? leftdepth[0] : rightdepth[0]);
                  return true;
              }
         }
