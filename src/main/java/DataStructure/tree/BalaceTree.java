@@ -1,3 +1,5 @@
+package DataStructure.tree;
+
 /**
  * @Created by mayuwan on 2019/3/17
  *
